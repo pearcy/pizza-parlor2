@@ -7,36 +7,27 @@ function Pizza (size, toppings, price) {
 }
 
 Pizza.prototype.sizePrice = function() {
-  this.price = 0;
-  if (this.size === "10inch") {
-    this.price = 12;
-  } else if (this.size === "16inch") {
-    this.price = 16;
+  this.price = 2;
+  if (this.size === "medium") {
+    this.price += 12;
+  } else if (this.size === "large") {
+    this.price += 16;
   } else
   return this.price;
 }
 
 Pizza.prototype.toppingPrice = function() {
-  let toppingCost = 0;
-  if (this.toppings === "cheese") {
-    toppingCost = 1;
-  } else if (this.toppings === "mush" || "pine") {
-    toppingCost = 2;
-  } else if (this.toppings == "pep") {
-    toppingCost = 3;
-  } 
-
+  let toppingCost = (this.toppings.length * 2.00);
   return toppingCost;
-
-}
+};
 
 
 Pizza.prototype.totalPrice = function () {
-  let sizePriceCalc = this.sizePrice();
-  console.log(sizePriceCalc);
-  let topPriceCalc = this.toppingPrice();
-  console.log(topPriceCalc);
-  let totalPrice = (sizePriceCalc + topPriceCalc);
+  let sizeCalc = this.sizePrice();
+  console.log(sizeCalc);
+  let topCalc = this.toppingPrice();
+  console.log(topCalc);
+  let totalPrice = (sizeCalc + topCalc);
   $("#price").html(totalPrice);
   
   // return totalPrice;
