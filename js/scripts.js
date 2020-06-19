@@ -1,14 +1,14 @@
 // Business Logic 
 
-function PizzaOrder () {
-  this.orders = [];
-  // this.currentId = 0;
-}
+// function PizzaOrder () {
+//   this.orders = [];
+//   // this.currentId = 0;
+// }
 
-PizzaOrder.prototype.addOrder = function(order) {
-  // order.id = this.assignId();
-  this.orders.push(order);
-}
+// PizzaOrder.prototype.addOrder = function(order) {
+//   // order.id = this.assignId();
+//   this.orders.push(order);
+// }
 
 
 // pizza business logic /////
@@ -43,24 +43,12 @@ Pizza.prototype.toppingPrice = function() {
 }
 
 Pizzaprototype.totalPrice = function () {
+  let sizePriceCalc = this.sizePrice();
+  let topPriceCalc = this.toppingPrice();
+  let totalPrice = (sizePriceCalc + topPriceCalc);
+  console.log(totalPrice);
 
 }
-
-
-// let size10 = new PizzaSize ("10inch", 10, 12);
-// let size16 = new PizzaSize ("16inch", 16, 18);
-
-// function PizzaTopping (type, cost) {
-//   this.type = type;
-//   this.cost = cost;
-// }
-
-// let cheese = new PizzaTopping ("cheese", 1)
-// let mush = new PizzaTopping ("mush", 2)
-// let pine = new PizzaTopping ("pine", 2)
-// let pep = new PizzaTopping ("pep", 3)
-
-
 
 
 function Order(sizeInput, top1Input, top2Input, top3Input, top4Input) {
