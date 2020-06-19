@@ -19,27 +19,46 @@ function Pizza (size, topping, price) {
   this.price = price;
 }
 
-// Price prototype 
-
-
-
-
-let size10 = new PizzaSize ("10inch", 10, 12);
-let size16 = new PizzaSize ("16inch", 16, 18);
-
-function PizzaTopping (type, cost) {
-  this.type = type;
-  this.cost = cost;
+Pizza.prototype.sizePrice = function() {
+  if (this.size === "10inch") {
+    this.price = 12;
+  } else if (this.size === "16inch") {
+    this.price = 16;
+  } else
+  return this.price;
 }
 
-let cheese = new PizzaTopping ("cheese", 1)
-let mush = new PizzaTopping ("mush", 2)
-let pine = new PizzaTopping ("pine", 2)
-let pep = new PizzaTopping ("pep", 3)
+Pizza.prototype.toppingPrice = function() {
+  let toppingCost = 0;
+  if (this.topping === "cheese") {
+    toppingCost = 1;
+  } else if (this.topping === "mush" || "pine") {
+    toppingCost = 2;
+  } else if (this.topping == "pep") {
+    toppingCost = 3;
+  } 
+
+  return toppingCost;
+
+}
+
+Pizzaprototype.totalPrice = function () {
+
+}
 
 
+// let size10 = new PizzaSize ("10inch", 10, 12);
+// let size16 = new PizzaSize ("16inch", 16, 18);
 
+// function PizzaTopping (type, cost) {
+//   this.type = type;
+//   this.cost = cost;
+// }
 
+// let cheese = new PizzaTopping ("cheese", 1)
+// let mush = new PizzaTopping ("mush", 2)
+// let pine = new PizzaTopping ("pine", 2)
+// let pep = new PizzaTopping ("pep", 3)
 
 
 
