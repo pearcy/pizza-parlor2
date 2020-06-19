@@ -11,6 +11,19 @@ PizzaOrder.prototype.addOrder = function(order) {
 }
 
 
+let size = { 
+  name: "10Inch", 
+  price: 10.00 
+};
+
+let topping = { 
+  name: "cheese", 
+  price: 1.00 
+};
+
+
+
+
 function Order(sizeInput, top1Input, top2Input, top3Input, top4Input) {
   this.sizeInput = parseInt(sizeInput);
   this.top1Input = parseInt(top1Input) || 0;
