@@ -11,16 +11,45 @@ PizzaOrder.prototype.addOrder = function(order) {
 }
 
 
+// pizza business logic /////
+
+function PizzaSize (name, size, topping) {
+  this.name = name;
+  this.size = size;
+  
+}
+
+
+let size10 = new PizzaSize ("10inch", 10);
+let size16 = new PizzaSize ("16inch", 16);
+ 
+
+function Dog(name, colors, age) {
+  this.name = name;
+  this.colors = colors;
+  this.age = age;
+}
+
+let falcor = new Dog("Falcor", ["black"], 4);
+let nola = new Dog("Nola", ["white", "black"], 6);
+let patsy = new Dog("Patsy", ["brown"], 7);
+
+
+
 let size = { 
-  name: "10Inch", 
-  price: 10.00 
+  name: "10Inch", "16Inch"
+  price: 10.00, 16.00
 };
 
 let topping = { 
-  name: "cheese", 
-  price: 1.00 
+  name: "cheese", "peperoni", "mushroom"
+  price: 1.00, 2.00, 2.00 
 };
 
+
+let tomatoes = { name: "Tomatoes", price: 2.99 };
+let cucumbers = { name: "Cucumbers", price: 0.99 };
+let onions = { name: "Onions", price: 0.79 };
 
 
 
