@@ -1,8 +1,8 @@
 // pizza business logic /////
 
-function Pizza (size, topping, price) {
+function Pizza (size, toppings, price) {
   this.size = size;
-  this.topping = topping;
+  this.toppings = toppings;
   this.price = price;
 }
 
@@ -18,11 +18,11 @@ Pizza.prototype.sizePrice = function() {
 
 Pizza.prototype.toppingPrice = function() {
   let toppingCost = 0;
-  if (this.topping === "cheese") {
+  if (this.toppings === "cheese") {
     toppingCost = 1;
-  } else if (this.topping === "mush" || "pine") {
+  } else if (this.toppings === "mush" || "pine") {
     toppingCost = 2;
-  } else if (this.topping == "pep") {
+  } else if (this.toppings == "pep") {
     toppingCost = 3;
   } 
 
@@ -30,13 +30,17 @@ Pizza.prototype.toppingPrice = function() {
 
 }
 
+
 Pizza.prototype.totalPrice = function () {
   let sizePriceCalc = this.sizePrice();
+  console.log(sizePriceCalc);
   let topPriceCalc = this.toppingPrice();
+  console.log(topPriceCalc);
   let totalPrice = (sizePriceCalc + topPriceCalc);
+  $("#price").html(totalPrice);
   
   // return totalPrice;
-  console.log(totalPrice);
+  // console.log(totalPrice);
 
 }
 
@@ -47,18 +51,13 @@ $(document).ready(function() {
     event.preventDefault();
 
     let size = $("input:radio[name=size]:checked").val();
-    console.log(size);
     let toppings = $("input:checkbox[name=topping]:checked");
-    console.log(topppings);
+    
 
     let pizza = new Pizza(size, toppings, price);
-    console.log(pizza);
-
+    // console.log(pizza);
     pizza.totalPrice();
-    console.log(pizza.totalPrice());
-
-
-   
+    // console.log(pizza.totalPrice());
 
 
   });

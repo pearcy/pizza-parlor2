@@ -67,21 +67,21 @@ console.log(totalPrice);
 // }
 
 
-// User Interface Logic
+User Interface Logic
 
 
-// function displayPizzaPrice(pizzaOrderToDisplay) {
-//   let ordersList = $("ul#orders");
-//   ordersList.html('');
-//   let htmlForOrderInfo = "";
-//   pizzaOrderToDisplay.orders.forEach(function(order) {
-//     htmlForOrderInfo += "$"+ order.sizeType() + "";
+function displayPizzaPrice(pizzaOrderToDisplay) {
+  let ordersList = $("ul#orders");
+  ordersList.html('');
+  let htmlForOrderInfo = "";
+  pizzaOrderToDisplay.orders.forEach(function(order) {
+    htmlForOrderInfo += "$"+ order.sizeType() + "";
     
-//   });
+  });
   
-//   ordersList.html(htmlForOrderInfo);
+  ordersList.html(htmlForOrderInfo);
   
-// };
+};
 
 
 $(document).ready(function() {
