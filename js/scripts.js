@@ -13,11 +13,16 @@ PizzaOrder.prototype.addOrder = function(order) {
 
 // pizza business logic /////
 
-function PizzaSize (name, size, cost) {
-  this.name = name;
+function Pizza (size, topping, price) {
   this.size = size;
-  this.cost = cost;
+  this.topping = topping;
+  this.price = price;
 }
+
+// Price prototype 
+
+
+
 
 let size10 = new PizzaSize ("10inch", 10, 12);
 let size16 = new PizzaSize ("16inch", 16, 18);
@@ -31,6 +36,10 @@ let cheese = new PizzaTopping ("cheese", 1)
 let mush = new PizzaTopping ("mush", 2)
 let pine = new PizzaTopping ("pine", 2)
 let pep = new PizzaTopping ("pep", 3)
+
+
+
+
 
 
 
