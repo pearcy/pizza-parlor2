@@ -9,8 +9,79 @@
   </head>
   <body>
     <div class="container">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Pizza Parlor</h1>
+          <p class="lead">Place your order below and we will deliver your pizza in 30 minutes.  Guaranteed Corona Free or your money back!</p>
+        </div>
+      </div>
 
-      
+         <!-- Size selection -->
+    
+    <div class="card">
+      <form id="pizzaOrder">
+        
+        <div class="card-header">Size</div>
+          <div class="card-body center-text">
+            <div id="sizeInput">
+
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="size" id="tenInch" value="10" checked>
+                <label class="form-check-label" for="inlineRadio1">10" Fun Size ($10)</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="size" id="sixteenInch" value="16">
+                <label class="form-check-label" for="inlineRadio2">16" Leftover Size ($16)</label>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card-header">Toppings</div>
+          <div class="card-body center-text">
+            <div id="topInput">
+
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" name="top1" id="inlineCheckbox1" value="1">
+                <label for="inlineCheckbox1" class="form-check-label">Cheese</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" name="top2" id="inlineCheckbox2" value="1">
+                <label for="inlineCheckbox2" class="form-check-label">Peperoni</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" name="top3" id="inlineCheckbox3" value="1">
+                <label for="inlineCheckbox3" class="form-check-label">Mushrooms</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" name="top4" id="inlineCheckbox4" value="1">
+                <label for="inlineCheckbox4" class="form-check-label">Pineapple</label>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary">Check Price</button>
+              </div>
+             
+      </form>
+
+
+      <div class="container center-text">
+        <h5>Price:</h5>
+        <ul id="orders">
+        </ul>
+      </div>
+    </div>
+
+
+
+
     </div>
   </body>
 </html>

@@ -6,7 +6,8 @@
 
 ## Description
 
-_Pizza Parlor_
+_ webpage that will allow user to select a pize size, toppings, 
+and get the price of their pizza order_
 
 ## Setup/Installation Requirements
 
@@ -33,5 +34,6 @@ _jQuery_
 
 ### License
 
+*This is liscenced under the MIT liscence*
 
-Copyright (c) 2016 **_Joseph Pearce_**
+Copyright (c) 2020 **_Joseph Pearce_**
