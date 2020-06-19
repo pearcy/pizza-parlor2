@@ -28,6 +28,20 @@ Order.prototype.sizeType = function() {
 // User Interface Logic
 
 
+function displayPizzaPrice(pizzaOrderToDisplay) {
+  let ordersList = $("ul#orders");
+  ordersList.html('');
+  let htmlForOrderInfo = "";
+  pizzaOrderToDisplay.orders.forEach(function(order) {
+    htmlForOrderInfo += "$"+ order.sizeType() + "";
+    
+  });
+  
+  ordersList.html(htmlForOrderInfo);
+  
+};
+
+
 $(document).ready(function() {
   
   $("form#pizzaOrder").submit(function(event) {
@@ -45,12 +59,17 @@ $(document).ready(function() {
     let newOrder = new Order(inputtedSize, inputtedTop1, inputtedTop2, inputtedTop3, inputtedTop4)
   
       console.log(newOrder);
+
+
+    pizzaOrder.addOrder(newOrder);
+
+    console.log(pizzaOrder.orders);
+  
+
+    displayPizzaPrice(pizzaOrder);
    
 
   
-
-
-    
 
   });
   
