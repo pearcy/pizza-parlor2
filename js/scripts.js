@@ -2,11 +2,11 @@
 
 function PizzaOrder () {
   this.orders = [];
-  this.currentId = 0;
+  // this.currentId = 0;
 }
 
 PizzaOrder.prototype.addOrder = function(order) {
-  order.id = this.assignId();
+  // order.id = this.assignId();
   this.orders.push(order);
 }
 
@@ -69,7 +69,6 @@ $(document).ready(function() {
     displayPizzaPrice(pizzaOrder);
    
 
-  
 
   });
   
