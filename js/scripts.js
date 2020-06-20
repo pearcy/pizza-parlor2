@@ -13,8 +13,8 @@ Pizza.prototype.sizePrice = function() {
   } else if (this.size === "large") {
     this.price += 16;
   } 
-  // return this.price;
-  console.log(this.price);
+  return this.price;
+  
 }
 
 Pizza.prototype.toppingPrice = function() {
@@ -31,14 +31,6 @@ Pizza.prototype.totalPrice = function(){
 };
 
 
-// Pizza.prototype.totalPrice = function () {
-//   let sizeCalc = this.sizePrice();
-//   let topCalc = this.toppingPrice();
-//   let totalPrice = (sizeCalc + topCalc);
-//   $("#price").html(totalPrice);
-
-// };
-
 // UI Logic 
 
 $(document).ready(function() {
@@ -46,14 +38,11 @@ $(document).ready(function() {
     event.preventDefault();
 
     let size = $("input:radio[name=size]:checked").val();
-    console.log(size);
     let toppings = $("input:checkbox[name=topping]:checked");
     
-
     let pizza = new Pizza(size, toppings, price);
-    // console.log(pizza);
     pizza.totalPrice();
-    // console.log(pizza.totalPrice());
+    
 
 
   });
