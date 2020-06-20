@@ -7,13 +7,14 @@ function Pizza (size, toppings, price) {
 }
 
 Pizza.prototype.sizePrice = function() {
-  this.price = 2;
+  this.price = 0;
   if (this.size === "medium") {
     this.price += 12;
   } else if (this.size === "large") {
     this.price += 16;
-  } else
-  return this.price;
+  } 
+  // return this.price;
+  console.log(this.price);
 }
 
 Pizza.prototype.toppingPrice = function() {
@@ -22,18 +23,21 @@ Pizza.prototype.toppingPrice = function() {
 };
 
 
-Pizza.prototype.totalPrice = function () {
-  let sizeCalc = this.sizePrice();
-  console.log(sizeCalc);
-  let topCalc = this.toppingPrice();
-  console.log(topCalc);
-  let totalPrice = (sizeCalc + topCalc);
+Pizza.prototype.totalPrice = function(){
+  var base = this.sizePrice();
+  var addOn = this.toppingPrice();
+  var totalPrice = (base + addOn);
   $("#price").html(totalPrice);
-  
-  // return totalPrice;
-  // console.log(totalPrice);
+};
 
-}
+
+// Pizza.prototype.totalPrice = function () {
+//   let sizeCalc = this.sizePrice();
+//   let topCalc = this.toppingPrice();
+//   let totalPrice = (sizeCalc + topCalc);
+//   $("#price").html(totalPrice);
+
+// };
 
 // UI Logic 
 
@@ -42,6 +46,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     let size = $("input:radio[name=size]:checked").val();
+    console.log(size);
     let toppings = $("input:checkbox[name=topping]:checked");
     
 
