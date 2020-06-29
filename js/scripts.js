@@ -42,11 +42,6 @@ $(document).ready(function() {
     let toppings = $("input:checkbox[name=topping]:checked");
     
     let pizza = new Pizza(size, toppings, price);
-    // create a variable in your user interface that calls on pizza.totalPrice() on line 44
-    // <h5>Your pizza will cost $<span id="price"></span></h5>
-    pizza.totalPrice();
-    
-    // $("#price").html(totalPrice);
     $("#price").html(pizza.totalPrice());
 
 
