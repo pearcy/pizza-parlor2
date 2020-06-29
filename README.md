@@ -6,13 +6,16 @@
 
 ## Description
 
-_ webpage that will allow user to select a pize size, toppings, 
-and get the price of their pizza order_
+A webpage that will allow user to select a pizza size & toppings a total price will be returned. 
 
 
 ## Specs
 
-Create a web application that takes a a pizza order (size, topping) and returns a range a the total cost of the pizza. 
+Create a web application that takes a a pizza order (size, topping) and returns the total cost of the pizza. 
+
+1. **Behavior:** Application will calculate the total cost of the pizza based on the size & toppings. 
+    * **Input Example:** size: 10", toppings: cheese, pepperoni
+    * **Output Example:** $16.00
 
 
 ## Setup/Installation Requirements
@@ -26,8 +29,7 @@ Open by downloading:
 Open via Bash/GitBash:
 1. Clone this repository onto your computer:
 `$ git clone https://github.com/pearcy/pizza-parlor2.git`
-2. Navigate into the `mr-rogers2` directory in Visual Studio Code or preferred text editor
-`$ code .`
+2. Navigate into the directory in Visual Studio Code or preferred text editor
 3. Open index.html in Chrome or preferred browser:
 `$ open index.html`
 
