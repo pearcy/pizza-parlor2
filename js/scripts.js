@@ -28,7 +28,7 @@ Pizza.prototype.totalPrice = function(){
   var addOn = this.toppingPrice();
   var totalPrice = (base + addOn);
   return totalPrice;
-  // $("#price").html(totalPrice);
+  
 };
 
 
