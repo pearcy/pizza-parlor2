@@ -24,8 +24,9 @@ Pizza.prototype.toppingPrice = function() {
 
 
 Pizza.prototype.totalPrice = function(){
-  var base = this.sizePrice();
-  var addOn = this.toppingPrice();
+  let base = this.sizePrice();
+  let addOn = this.toppingPrice();
+  console.log(addOn);
   var totalPrice = (base + addOn);
   return totalPrice;
   
@@ -39,10 +40,13 @@ $(document).ready(function() {
     event.preventDefault();
 
     let size = $("input:radio[name=size]:checked").val();
+    console.log(size);
     let toppings = $("input:checkbox[name=topping]:checked");
+    console.log(toppings);
     
     let pizza = new Pizza(size, toppings, price);
     $("#price").html(pizza.totalPrice());
+    console.log(pizza);
 
 
   });
