@@ -26,13 +26,6 @@ Create a web application that takes a a pizza order (size, topping) and returns 
     * **Output Example:** $16.00
 
 
-Add two more specs;
-    
-    The program first stores the input of size which has a price value, then if a user selects toppings it loops through the selections to generate a topping price, 
-    
-    after that would come the spec that takes the user inputs and shows the user their total.
-
-
 ## Setup/Installation Requirements
 
 To clone and run this application, you'll need Git and Node.js (which comes with npm) installed on your computer.
